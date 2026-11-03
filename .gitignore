@@ -18,3 +18,7 @@ Thumbs.db
 *.pyc
 build/
 dist/
+
+# Agent working state / IDE deployment metadata
+.agent/
+*.qoder.site
