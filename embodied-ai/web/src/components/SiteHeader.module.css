@@ -1,0 +1,144 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  max-width: var(--page-max);
+  height: var(--header-h);
+  margin: 0 auto;
+  padding: 0 var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.mark {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--brand);
+  color: var(--bg);
+}
+
+.mark svg {
+  width: 19px;
+  height: 19px;
+}
+
+.brandText {
+  font-weight: 650;
+  font-size: var(--text-sm);
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.navLink {
+  padding: 6px 10px;
+  border-radius: var(--r-sm);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color 120ms var(--ease), background 120ms var(--ease);
+}
+
+.navLink:hover {
+  color: var(--ink);
+  background: var(--surface-muted);
+}
+
+.themeBtn {
+  margin-left: 6px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: border-color 120ms var(--ease), color 120ms var(--ease);
+}
+
+.themeBtn:hover {
+  border-color: var(--border-strong);
+  color: var(--ink);
+}
+
+.themeBtn svg {
+  width: 17px;
+  height: 17px;
+  grid-area: 1 / 1;
+}
+
+.themeBtn svg:first-of-type {
+  display: block;
+}
+
+.themeBtn svg:last-of-type {
+  display: none;
+}
+
+:global(:root[data-theme='dark']) .themeBtn svg:first-of-type {
+  display: none;
+}
+
+:global(:root[data-theme='dark']) .themeBtn svg:last-of-type {
+  display: block;
+}
+
+.progressTrack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: var(--brand);
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 90ms linear;
+}
+
+@media (max-width: 720px) {
+  .inner {
+    padding: 0 var(--sp-4);
+  }
+  .navLink {
+    display: none;
+  }
+  .brandText {
+    font-size: var(--text-xs);
+  }
+}

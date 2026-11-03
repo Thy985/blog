@@ -1,0 +1,6 @@
+node_modules/
+dist/
+dist-ssr/
+src/content/generated/
+*.local
+.vite/

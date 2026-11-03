@@ -1,0 +1,121 @@
+/* ===================================================================
+   设计令牌 —— 全站视觉的唯一来源
+   语义配色：青绿 = 确定性经典栈，琥珀 = 学习派。两派是全系列的主线，
+   因此配色不是装饰，而是编码内容。
+   =================================================================== */
+
+:root {
+  /* —— 表面 —— */
+  --bg: #ffffff;
+  --bg-soft: #f5f8f7;
+  --surface: #ffffff;
+  --surface-muted: #f1f5f4;
+  --surface-sunken: #eceff0;
+
+  /* —— 描边 —— */
+  --border: #e3e8e7;
+  --border-strong: #cdd6d4;
+
+  /* —— 文字 —— */
+  --ink: #0f1514;
+  --ink-2: #3b4744;
+  --ink-3: #6b7774;
+  --ink-4: #96a19e;
+
+  /* —— 主色：确定性栈 —— */
+  --brand: #0f766e;
+  --brand-ink: #0a5b55;
+  --brand-soft: #e4f2f0;
+  --brand-line: #9fd3cc;
+
+  /* —— 次色：学习派 —— */
+  --accent: #b45309;
+  --accent-ink: #8a4007;
+  --accent-soft: #fdf2e3;
+  --accent-line: #eec99a;
+
+  /* —— 语义 —— */
+  --danger: #b42318;
+  --danger-soft: #fdeceb;
+  --ok: #15803d;
+
+  /* —— 排版 —— */
+  --font-sans: system-ui, -apple-system, 'PingFang SC', 'HarmonyOS Sans SC',
+    'Microsoft YaHei', 'Noto Sans SC', 'Source Han Sans SC', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Mono', 'SF Mono', Consolas,
+    'Courier New', 'Noto Sans Mono CJK SC', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 1rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.5rem;
+  --text-4xl: 3.25rem;
+
+  /* —— 间距 —— */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+
+  /* —— 圆角 —— */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-full: 999px;
+
+  /* —— 阴影 —— */
+  --shadow-sm: 0 1px 2px rgb(15 21 20 / 0.06);
+  --shadow-md: 0 2px 8px rgb(15 21 20 / 0.07), 0 1px 2px rgb(15 21 20 / 0.05);
+  --shadow-lg: 0 12px 32px rgb(15 21 20 / 0.1), 0 2px 8px rgb(15 21 20 / 0.05);
+
+  /* —— 布局 —— */
+  --page-max: 1440px;
+  --prose-max: 46rem;
+  --header-h: 58px;
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root[data-theme='dark'] {
+  --bg: #0d1113;
+  --bg-soft: #090c0e;
+  --surface: #14191b;
+  --surface-muted: #1b2225;
+  --surface-sunken: #0f1416;
+
+  --border: #252d30;
+  --border-strong: #374346;
+
+  --ink: #e7edeb;
+  --ink-2: #b4c0bd;
+  --ink-3: #85938f;
+  --ink-4: #5f6d69;
+
+  --brand: #2dd4bf;
+  --brand-ink: #5eead4;
+  --brand-soft: #0d2a27;
+  --brand-line: #1f5d56;
+
+  --accent: #fbbf24;
+  --accent-ink: #fcd34d;
+  --accent-soft: #2c2210;
+  --accent-line: #6b5115;
+
+  --danger: #f87171;
+  --danger-soft: #2a1414;
+  --ok: #4ade80;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 2px 8px rgb(0 0 0 / 0.45);
+  --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.55);
+}

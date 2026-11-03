@@ -1,0 +1,77 @@
+/* 双臂协调：距离、持有者、状态说明 */
+
+.gap,
+.owner {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: var(--sp-3);
+  padding: var(--sp-3);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: var(--text-xs);
+  color: #8faeaa;
+}
+
+.gap strong,
+.owner strong {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  color: #7fe0a4;
+}
+
+.gap[data-collide='true'] {
+  background: rgba(180, 35, 24, 0.22);
+  border-color: rgba(224, 96, 82, 0.5);
+}
+
+.gap[data-collide='true'] strong {
+  color: #ff9d8e;
+}
+
+.gap em {
+  font-style: normal;
+  font-size: var(--text-xs);
+  opacity: 0.85;
+}
+
+.owner strong[data-on='true'] {
+  color: var(--accent);
+}
+
+.owner strong[data-on='false'] {
+  color: #8faeaa;
+}
+
+.note {
+  margin: 0 0 var(--sp-3);
+  padding: 9px 12px;
+  border-left: 2px solid var(--accent);
+  background: rgba(217, 119, 6, 0.12);
+  font-size: var(--text-xs);
+  line-height: 1.75;
+  color: #c8dcd8;
+}
+
+/* zone 标签 */
+
+.zoneTag {
+  padding: 2px 9px;
+  border-radius: var(--r-full);
+  background: rgba(12, 24, 27, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #8faeaa;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.zoneTag[data-on='true'] {
+  background: rgba(217, 119, 6, 0.9);
+  border-color: var(--accent);
+  color: #1a1206;
+  font-weight: 650;
+}

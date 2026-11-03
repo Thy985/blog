@@ -1,0 +1,86 @@
+/* IK 场景控件与状态显示 */
+
+.reach {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: var(--sp-4);
+  padding: var(--sp-3);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: var(--text-xs);
+  color: #8faeaa;
+}
+
+.reach strong {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: #cfe3df;
+}
+
+/* 解状态 */
+
+.status {
+  margin-top: var(--sp-3);
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  font-size: var(--text-sm);
+  font-weight: 650;
+  font-family: var(--font-mono);
+}
+
+.status[data-status='ok'] {
+  background: rgba(21, 128, 61, 0.22);
+  border: 1px solid rgba(52, 190, 108, 0.5);
+  color: #7fe0a4;
+}
+
+.status[data-status='too_far'],
+.status[data-status='too_near'] {
+  background: rgba(180, 35, 24, 0.22);
+  border: 1px solid rgba(224, 96, 82, 0.5);
+  color: #ff9d8e;
+}
+
+/* 关节角读数 */
+
+.joints {
+  margin: var(--sp-3) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 3px;
+}
+
+.joints li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-3);
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: #8faeaa;
+}
+
+.joints li strong {
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  color: var(--accent);
+}
+
+/* 目标点标签 */
+
+.targetTag {
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  background: rgba(12, 24, 27, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #dcebe8;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+}
